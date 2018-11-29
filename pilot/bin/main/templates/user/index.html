@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <p>登录成功后测试页面！</p>
+ <p>你拥有的权限如下:</p><br>
+ <div sec:authorize="hasRole('ROLE_TEST_1')">菜单1</div>
+ <div sec:authorize="hasRole('ROLE_TEST_2')">菜单2</div>
+ <div sec:authorize="hasRole('ROLE_TEST_3')">菜单3</div>
+</body>
+</html>
