@@ -41,7 +41,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          .and()
          .authorizeRequests()        // 定义哪些URL需要被保护、哪些不需要被保护
          .antMatchers("/user/login").permitAll()     // 设置所有人都可以访问登录页面
-         .antMatchers("/user/register").permitAll()     // 设置所有人都可以访问登录页面
          .anyRequest()               // 任何请求,登录后可以访问
          .authenticated()
          .and()
